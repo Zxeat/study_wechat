@@ -1,0 +1,24 @@
+<!-- 
+  导航组件 navigator (相当于块级元素 默认会换行 可以直接加入宽度和高度)
+  1.url 要跳转的页面路径 （可以是绝对路径或相对路径）
+  2.target属性 要跳转到当前的小程序 还是其他的小程序
+    默认值 self 跳到自己的页面
+    miniProgram 跳到其他小程序页面
+  3.open-type 跳转方式
+    3.1 navigate 默认值 保留当前页面，跳转到应用内的某个页面，但是不能跳转到tabbar页面
+    3.2 redirect 关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到tabbar页面
+    3.3 switchTab 跳转到tabber页面，并关闭其他所有非tabber页面
+    3.4 reLaunch 关闭所有页面，打开应用内的某个页面（随便跳）
+-->
+<navigator url="/pages/swipertext/swipertext">轮播图页面</navigator>
+<navigator url="/pages/demo/demo">列表循环和事件页面</navigator>
+<navigator open-type="redirect" url="/pages/swipertext/swipertext">轮播图页面 redirect方式</navigator>
+
+<view class="rich">----------以下是富文本标签练习---------</view>
+<!-- 
+  rich-text 富文本标签
+  1.nodes属性来实现
+    1.1 接收标签字符串
+    1.2 接收对象数组
+-->
+<rich-text nodes="{{html}}"></rich-text>

@@ -1,0 +1,4 @@
+/* pages/buttontext/buttontext.wxss */
+view{
+  text-align: center;
+}

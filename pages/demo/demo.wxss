@@ -1,0 +1,18 @@
+/* pages/demo/demo.wxss */
+.insert_value{
+  width: 90%;
+  height: 60rpx;
+  margin: 0 auto;
+  padding-left: 10rpx;
+  border: 2rpx solid #fca; 
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+.button_style{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+button{
+  background-color: #fca;
+}

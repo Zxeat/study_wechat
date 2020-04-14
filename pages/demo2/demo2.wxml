@@ -1,0 +1,20 @@
+<!-- 
+  text
+    1.长按文字复制 selecttable
+    2.对文本内容进行解码
+-->
+<text selectable decode>text &nbsp; 123 &lt;</text>
+
+<!-- 
+  image 图片标签
+    1.src指定要加载的图片的路径
+      图片存在默认的宽度和高度 320*240  原图大小是650*650
+    2.mode属性 决定图片内容如何和图片标签 宽高 做适配的
+      2.1 scaleToFill 默认值 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素
+      2.2 aspectFit 保持宽高比 确保图片的长边显示出来 页面轮播图常用
+      2.3 aspectFill 保持纵横比缩放图片，只保证图片的短边能完全显示出来。 比较少用
+      2.4 widthFix 宽度不变，高度自动变化，保持原图宽高比不变。 比较常用
+    3.小程序当中的图片 直接就支持 懒加载模式 lazy-load
+      lazy-load 会自己判断 当图片出现在视口的上下三屏的高度之内的时候 自己就开始加载图片
+-->
+<image mode="widthFix" src="https://ae01.alicdn.com/kf/H4d6360da8cce459bbff3c9dd67dd0aa4D.jpg"></image>
