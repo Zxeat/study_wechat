@@ -1,0 +1,24 @@
+@import "../../iconfont/iconfont.wxss";
+.search{
+    padding: 0 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search .iconfont{
+    font-size: 40rpx;
+    padding: 0 20rpx;
+}
+.search .left{
+    border: 2rpx solid #b2b2b2;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.search input{
+    height: 60rpx;
+    flex: 1;
+}
+.search .iconfont.icon-weibiaoti--{
+    font-size: 50rpx;
+}

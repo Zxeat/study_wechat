@@ -1,0 +1,7 @@
+<view class="search">
+    <view class="left">
+        <view class="iconfont icon-search"></view>
+        <input placeholder="小当家方便面"></input>
+    </view>
+    <view class="iconfont icon-weibiaoti--"></view>
+</view>

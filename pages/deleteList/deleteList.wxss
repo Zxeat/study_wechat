@@ -1,0 +1,8 @@
+.test{
+    display: flex;
+    flex-direction: column;
+}
+.test_item{
+    display: flex;
+    margin: 10px 0;
+}

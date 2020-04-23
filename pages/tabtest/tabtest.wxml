@@ -1,0 +1,46 @@
+<!-- 
+    实现页面导航并展示不同内容的效果
+        思路：1.在data中定义一个变量（activeIndex）用来接收数组元素的下标
+             2.利用 （data-）语法 将元素下标传给clickTab函数，通过该函数将元素下标index传递给activeIndex
+             3.利用三元运算符 将activeIndex和index作比较 如果下标相等 则为该元素添加 active类选择器
+             4.利用 wx:if语句来做判断 进行点击不同导航元素 显示不同的内容
+-->
+<view class="tab_test">
+    <view class="tab_item {{activeIndex===index?'active':''}}" wx:for="{{list}}" wx:key="*this" data-index="{{index}}" bindtap="clickTab">
+        {{item}}
+    </view>
+</view>
+<view wx:if="{{activeIndex===0}}">111111</view>
+<view wx:elif="{{activeIndex===1}}">222222</view>
+<view wx:else>333333</view>
+
+
+<!-- 
+    实现弹出广告与关闭的效果 
+        思路：1.先定义变量isShow 用来接受是否展示的结果 默认为true
+             2.绑定点击事件 当用户点击关闭按钮的时候 将变量isShow由true变为false
+             3.通过wx:if来控制广告的弹出与关闭
+-->
+<view class="show_modal" wx:if="{{isShow}}">
+    <view class="show">
+        <image mode="widthFix" src="http://s1.hdslb.com/bfs/static/jinkela/space/asserts/dbz-hint-33.png"></image>
+        <view class="close" bindtap="isShowModal">X</view>
+    </view>
+</view>
+
+<!-- 
+    页面间传值的实现
+        思路：利用导航标签的url属性 将要传递的参数指定给哪一个页面
+            在另一个页面中通过onLoad中的options查看
+-->
+<view class="sendvalue">
+    <navigator url="../demo2/demo2?id=1001">1001</navigator>
+    <navigator url="../demo2/demo2?id=10002">10002</navigator>
+</view>  
+
+<!-- 
+    扫一扫功能实现 
+        利用微信自带的功能实现扫一扫 微信小程序开发文档
+        wx.scanCode({})方法
+-->
+<button class="btn_saoma" bindtap="saoMa">扫一扫</button>

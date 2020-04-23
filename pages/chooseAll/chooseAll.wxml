@@ -1,0 +1,21 @@
+<view class="box" wx:for="{{goodsList}}" wx:key="id">
+    <view class="check iconfont {{item.checked?'icon-xuanze-copy':'icon-xuanze1'}}" bindtap="chooseItem" data-id="{{item.id}}"></view>
+    <view class="shop_box">
+        <view class="shop_item">{{item.name}}</view>
+        <view class="shop_size">{{item.guige}}</view>
+    </view>
+    <view class="item_money">{{item.price}}</view>
+    <view class="item_number">
+        <view class="jian" bindtap="reduceNumber" data-id="{{item.id}}">-</view>
+        <view class="mo_ren">{{item.count}}</view>
+        <view class="add" bindtap="addNumber" data-id="{{item.id}}">+</view>
+    </view>
+</view>
+<view class="bottom_box">
+    <view class="select">
+        <view class="check iconfont {{isSelectAll?'icon-xuanze-copy':'icon-xuanze1'}}" bindtap="selectAll"></view>
+        <view class="chooes_text">全选</view>
+    </view>
+    <view class="total_money" data-id="{{item.id}}">总额:{{totalMoney}}</view>
+    <view class="btn">结算</view>
+</view>
